@@ -3,6 +3,7 @@
 ## 预览
 
 克隆本项目到本地，命令行`npm install & npm run start`即可本地启动本项目进行预览
+或者在[GitHub Page](https://xwhoward.github.io/select/)上直接预览
 
 ## 功能
 
