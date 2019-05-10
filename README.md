@@ -1,5 +1,9 @@
 # select 组件
 
+## 预览
+
+克隆本项目到本地，命令行`npm install & npm run start`即可本地启动本项目进行预览
+
 ## 功能
 
 - 基础 select 功能
