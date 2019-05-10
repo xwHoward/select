@@ -1,0 +1,120 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font: 16px 'Arial', 'Microsoft YaHei', '黑体', '宋体', sans-serif;
+}
+
+.select-wrapper {
+  padding: 20px;
+}
+
+.xg-select {
+  position: relative;
+}
+
+.xg-select::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAWUlEQVQ4T2NkoBAwUqifYdQABuxhUFBQ4MDIyPgfPYD7+/sPoothDcSCgoIEBgaG+WiKEydMmLCAKANAitAMwaoZpA5vNEINYcBmM8wlo+mAQCASk9EoDkQA6WITEZWewQ0AAAAASUVORK5CYII=);
+}
+
+.xg-select.open::after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.xg-select-input {
+  height: 32px;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  width: 100%;
+  padding: 0 10px;
+  line-height: 30px;
+  font-size: 16px;
+  outline: none;
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.xg-select-input:hover {
+  border-color: #40a9ff;
+}
+
+/* .xg-select .input-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 30px;
+  bottom: 0;
+}
+
+.xg-select .clear {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 30px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  cursor: pointer;
+} */
+
+.xg-select-panel {
+  position: absolute;
+  font-size: 14px;
+  top: 32px;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  border-bottom: none;
+  border-top: none;
+  z-index: 1050;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.xg-select-panel .scroll-list {
+  position: relative;
+}
+
+.xg-select-panel .xg-select-item {
+  position: absolute;
+  width: 100%;
+  padding: 0 12px;
+  color: rgba(0, 0, 0, 0.65);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  overflow: hidden;
+}
+.xg-select-panel .xg-select-empty,
+.xg-select-panel .xg-select-loading {
+  padding: 5px 12px;
+  color: rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  overflow: hidden;
+}
+.xg-select-panel .xg-select-item strong {
+  color: red;
+}
+/* .xg-select-panel .xg-select-item:hover, */
+.xg-select-item-focused {
+  background-color: #e6f7ff;
+}
+
+.xg-select-panel .xg-select-item.xg-select-item-selected {
+  background-color: DodgerBlue;
+  color: #ffffff;
+}
