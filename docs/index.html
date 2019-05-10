@@ -8,12 +8,21 @@
   </head>
   <body>
     <div class="select-wrapper">
+      <p>本示例用于展示前缀匹配、同步数据展示</p>
       <input type="text" id="sync-select" placeholder="同步数据选择器" />
     </div>
     <div class="select-wrapper">
+      <p>
+        本示例用于展示异步加载数据功能，由于使用的公共API不支持按关键词返回结果，所以结果前缀匹配功能看起来有误，实际使用时接入正确API前缀匹配功能即可恢复正常
+      </p>
       <input type="text" id="async-select" placeholder="异步数据选择器" />
     </div>
     <div class="select-wrapper">
+      <p>
+        首次查询会mock 1500w
+        条随机数据，整个mock数据的过程耗时较长，经分析在测试的约 38s
+        等待时间中约 36s 用于生成数据，2s 用于查找匹配。请耐心等待。
+      </p>
       <input type="text" id="massive-select" placeholder="大量数据选择器" />
     </div>
   <script type="text/javascript" src="app.bundle.js"></script><script type="text/javascript" src="worker.bundle.js"></script></body>

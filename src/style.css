@@ -5,7 +5,10 @@
 body {
   font: 16px 'Arial', 'Microsoft YaHei', '黑体', '宋体', sans-serif;
 }
-
+p {
+  font-size: 12px;
+  color: #f44336;
+}
 .select-wrapper {
   padding: 20px;
 }
@@ -47,27 +50,6 @@ body {
   border-color: #40a9ff;
 }
 
-/* .xg-select .input-wrapper {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 30px;
-  bottom: 0;
-}
-
-.xg-select .clear {
-  position: absolute;
-  right: 0;
-  top: 5px;
-  width: 30px;
-  height: 20px;
-  line-height: 20px;
-  font-size: 12px;
-  color: #999;
-  text-align: center;
-  cursor: pointer;
-} */
-
 .xg-select-panel {
   position: absolute;
   font-size: 14px;
@@ -106,9 +88,11 @@ body {
   cursor: pointer;
   overflow: hidden;
 }
+
 .xg-select-panel .xg-select-item strong {
-  color: red;
+  color: #f44336;
 }
+
 /* .xg-select-panel .xg-select-item:hover, */
 .xg-select-item-focused {
   background-color: #e6f7ff;

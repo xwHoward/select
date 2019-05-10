@@ -59,14 +59,29 @@ function mockMassiveDataWithWebWorker(total) {
     );
   };
   return function(keyword) {
+    const start = new Date();
     worker.postMessage({ keyword, total });
     return new Promise((resolve, reject) => {
       worker.onmessage = e => {
-        const amount = document.createElement('p');
-        amount.innerHTML = `共${e.data.length}条搜索结果`;
-        massiveSelect.wrapper.parentNode.appendChild(amount);
-        resolve(e.data);
+        if (e.data.type === 'mock') {
+          log(`数据生成完毕...耗时${e.data.duration}s`);
+        }
+        if (e.data.type === 'data') {
+          const end = new Date();
+          log(
+            `本次查询耗时${(end - start) / 1000}s，共返回${
+              e.data.data.length
+            }条搜索结果`
+          );
+          resolve(e.data.data);
+        }
       };
     });
   };
+}
+
+function log(message) {
+  const logEl = document.createElement('p');
+  logEl.innerHTML = message;
+  massiveSelect.wrapper.parentNode.appendChild(logEl);
 }

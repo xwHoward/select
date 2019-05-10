@@ -5,7 +5,7 @@
 克隆本项目到本地，命令行`npm install & npm run start`即可本地启动本项目进行预览
 或者在[GitHub Page](https://xwhoward.github.io/select/)上直接预览
 
-## 功能
+## 要求
 
 - 基础 select 功能
 - 支持直接输入，输入时下拉列表的选项自动前缀匹配，匹配到的前缀用红色文字展示
@@ -84,7 +84,7 @@ new Select(elementId: string, callback: (option: DataModel) => void, configObj: 
 1. 支持通过配置参数设定 select 组件数据获取为同步模式、异步模式
 2. 针对大量数据渲染采用“虚拟滚动”技术，渲染 10W+数据不会产生性能负担，并且可以做到全量显示
 3. 针对大量数据查找效率问题，将关键词匹配的计算放到 Web Worker 中，UI 线程不会被阻塞，界面不会卡顿
-   > 目前设定为生成 150w 条随机数据，查找结果约 12w 条，经分析在测试约 38s 等待时间中约 5s 用于生成数据，2s 用于查找匹配
+   > 目前设定为生成 1500w 条随机数据，查找结果约 12w 条，经分析在测试约 38s 等待时间中约 5s 用于生成数据，2s 用于查找匹配
 4. 对输入进行防抖和去重，减少不必要查询请求
 
 ## BUG & TODO
@@ -93,4 +93,4 @@ new Select(elementId: string, callback: (option: DataModel) => void, configObj: 
 2. 交互细节优化，如未添加动画效果，
 3. 可配置项还可以进一步拓展
 4. 配置 webpack 转化 es6 为 es5 以下，支持更多浏览器
-5. 未支持多选
+5. 支持多选
